@@ -318,6 +318,18 @@ Code style: TypeScript strict, repository pattern (DB erişimi tek katmanda), t�
 - [ ] iOS / iPadOS sürümü (SwiftUI + paylaşılan SQLite)
 - [ ] Tahminsel analizler (önümüzdeki ay tahmini)
 
+## Marka Varlıkları
+
+- **Logo**: [`branding/logo.png`](branding/logo.png) — 1619×750 RGBA PNG
+- **App icon**: [`build/icon.png`](build/icon.png) — 1024×1024 (electron-builder bunu otomatik `.icns`'e çevirir)
+
+İkonu yeniden üretmek isterseniz:
+
+```bash
+pip3 install Pillow --break-system-packages
+python3 scripts/make-icon.py
+```
+
 ## Lisans
 
 MIT © [Onur Genç](https://github.com/onurgncode)
