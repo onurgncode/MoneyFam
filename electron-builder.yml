@@ -1,0 +1,30 @@
+appId: com.moneyfam.app
+productName: MoneyFam
+directories:
+  output: dist
+  buildResources: build
+files:
+  - out/**/*
+  - package.json
+  - '!**/*.{md,test.ts,spec.ts}'
+asarUnpack:
+  - node_modules/better-sqlite3/**/*
+mac:
+  category: public.app-category.finance
+  target:
+    - target: dmg
+      arch:
+        - universal
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  # entitlements: build/entitlements.mac.plist
+  # notarize:
+  #   teamId: TEAMID
+dmg:
+  contents:
+    - x: 130
+      y: 220
+    - x: 410
+      y: 220
+      type: link
+      path: /Applications
