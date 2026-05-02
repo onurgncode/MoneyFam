@@ -36,16 +36,16 @@ Bir fatura eklerken "**Kim için?**" alanı vardır:
 | Seçim | Anlamı | Örnekler |
 |---|---|---|
 | **Ev (paylaşımlı)** | Hane gideri — herkesin sorumluluğu | Kira, elektrik, su, doğalgaz, internet |
-| **Bir kişi** (örn. Onur) | O kişinin **harçlığına yazılır** | Onur'un telefon faturası, Mahmut'un özel sigortası |
+| **Bir kişi** | O kişinin **harçlığına yazılır** | Bir hane üyesinin telefon faturası, kişisel sigorta |
 
-**Somut bir örnek** — Mayıs 2026'da:
+**Somut bir örnek** — bir hane üyesi için Mayıs 2026'da:
 
 ```
-Onur için yapılan giderler:
+Hane üyesi için yapılan giderler:
   ↳ 1.000 ₺  nakit harçlık verildi
-  ↳   600 ₺  Onur'un Turkcell faturası ödendi  (kim için: Onur)
+  ↳   600 ₺  kişiye ait telefon faturası ödendi (kim için: o kişi)
   ───────
-  1.600 ₺   Onur'un Mayıs ayı toplam harçlığı
+  1.600 ₺   o kişinin Mayıs ayı toplam harçlığı
 
 Hane (ev) faturaları:
   ↳ 18.000 ₺  Kira              (kim için: Ev)
@@ -55,12 +55,12 @@ Hane (ev) faturaları:
   19.790 ₺   Aylık ev gideri
 ```
 
-**Neden böyle?** Onur'un telefon faturası bir "ev gideri" değil — Onur'un kişisel tüketimi. Onu ev faturalarına eklerseniz, "ev ne kadar tüketti?" sorusunun cevabı şişer ve "Onur ne kadar tüketti?" sorusunun cevabı eksik kalır.
+**Neden böyle?** Bir hane üyesinin telefon faturası bir "ev gideri" değil — kişisel tüketim. Onu ev faturalarına eklerseniz "ev ne kadar tüketti?" sorusunun cevabı şişer ve "o kişi ne kadar tüketti?" sorusunun cevabı eksik kalır.
 
 Dashboard'da:
 - **Toplam Gider**'de fatura **bir kez** sayılır (çift sayma yok)
-- **Kişi Bazlı Harçlık** grafiğinde Onur'un dilimi 1.600 ₺ gösterilir
-- **Fatura Türü Dağılımı**'nda Turkcell + diğer telefon faturaları ayrı bir dilim olur
+- **Kişi Bazlı Harçlık** grafiğinde her hane üyesinin dilimi ayrı görünür
+- **Fatura Türü Dağılımı**'nda telefon faturaları ayrı bir kategori olur
 
 ## Ekran Görüntüleri
 
@@ -332,7 +332,7 @@ python3 scripts/make-icon.py
 
 ## Lisans
 
-MIT © [Onur Genç](https://github.com/onurgncode)
+MIT — bkz. [LICENSE](LICENSE)
 
 ---
 
