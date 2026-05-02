@@ -15,11 +15,44 @@
 
 Çoğu bütçe uygulaması bireysel kullanıcılar için tasarlanır. **MoneyFam hane bazlı düşünür**:
 
-- 🏠 **Ev faturaları** ve **kişisel faturalar** ayrımı — Onur'un telefon faturası onun harçlığına yazılır, kira herkesin
-- 💸 **Harçlık formülü** otomatik: `nakit verilen + adına ödenmiş faturalar`
+- 🏠 **Ev faturaları ile kişisel faturaları ayırır** — kim ne kadar tüketti, doğru görünür _([detaylı açıklama](#ev-faturas%C4%B1-vs-ki%C5%9Fisel-fatura))_
+- 💸 **Otomatik harçlık formülü**: `verilen nakit + adına ödenmiş faturalar`
 - 📊 **Çift sayma yok**: Toplam gider hesabı matematiksel olarak doğru
 - 🔒 **Tamamen offline**: Veriler SQLite'ta lokalde, internet bağlantısı yok, telemetri yok
 - 🧮 **Türkçe locale**: Para `1.234,56 ₺`, tarih `15.05.2026`
+
+### Ev faturası vs kişisel fatura
+
+Bir fatura eklerken "**Kim için?**" alanı vardır:
+
+| Seçim | Anlamı | Örnekler |
+|---|---|---|
+| **Ev (paylaşımlı)** | Hane gideri — herkesin sorumluluğu | Kira, elektrik, su, doğalgaz, internet |
+| **Bir kişi** (örn. Onur) | O kişinin **harçlığına yazılır** | Onur'un telefon faturası, Mahmut'un özel sigortası |
+
+**Somut bir örnek** — Mayıs 2026'da:
+
+```
+Onur için yapılan giderler:
+  ↳ 1.000 ₺  nakit harçlık verildi
+  ↳   600 ₺  Onur'un Turkcell faturası ödendi  (kim için: Onur)
+  ───────
+  1.600 ₺   Onur'un Mayıs ayı toplam harçlığı
+
+Hane (ev) faturaları:
+  ↳ 18.000 ₺  Kira              (kim için: Ev)
+  ↳  1.250 ₺  Elektrik           (kim için: Ev)
+  ↳    540 ₺  İnternet           (kim için: Ev)
+  ───────
+  19.790 ₺   Aylık ev gideri
+```
+
+**Neden böyle?** Onur'un telefon faturası bir "ev gideri" değil — Onur'un kişisel tüketimi. Onu ev faturalarına eklerseniz, "ev ne kadar tüketti?" sorusunun cevabı şişer ve "Onur ne kadar tüketti?" sorusunun cevabı eksik kalır.
+
+Dashboard'da:
+- **Toplam Gider**'de fatura **bir kez** sayılır (çift sayma yok)
+- **Kişi Bazlı Harçlık** grafiğinde Onur'un dilimi 1.600 ₺ gösterilir
+- **Fatura Türü Dağılımı**'nda Turkcell + diğer telefon faturaları ayrı bir dilim olur
 
 ## Ekran Görüntüleri
 
