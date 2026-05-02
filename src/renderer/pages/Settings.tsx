@@ -195,7 +195,7 @@ export function Settings(): React.ReactElement {
           <CardTitle>Sürüm</CardTitle>
         </CardHeader>
         <CardContent className="text-sm text-muted-foreground">
-          MoneyFam 0.1.0 — macOS aile bütçe takip uygulaması
+          MoneyFam 0.1.1 — macOS aile bütçe takip uygulaması
         </CardContent>
       </Card>
     </div>
