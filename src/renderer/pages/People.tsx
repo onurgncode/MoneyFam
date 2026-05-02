@@ -108,15 +108,26 @@ export function People({ newRequestKey }: Props): React.ReactElement {
 
   if (persons.length === 0) {
     return (
-      <EmptyState
-        title="Henüz kişi yok"
-        description="Hane içindeki kişileri ekleyerek harçlık takibini başlatabilirsiniz."
-        actionLabel="Yeni Kişi Ekle"
-        onAction={() => {
-          setEditingPerson(null);
-          setPersonFormOpen(true);
-        }}
-      />
+      <>
+        <EmptyState
+          title="Henüz kişi yok"
+          description="Hane içindeki kişileri ekleyerek harçlık takibini başlatabilirsiniz."
+          actionLabel="Yeni Kişi Ekle"
+          onAction={() => {
+            setEditingPerson(null);
+            setPersonFormOpen(true);
+          }}
+        />
+        <PersonFormDialog
+          open={personFormOpen}
+          onOpenChange={setPersonFormOpen}
+          editing={editingPerson}
+          onSaved={() => {
+            setPersonFormOpen(false);
+            reloadPersons();
+          }}
+        />
+      </>
     );
   }
 
