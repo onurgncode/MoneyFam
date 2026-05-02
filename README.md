@@ -23,11 +23,33 @@
 
 ## Ekran Görüntüleri
 
-> _Demo verisiyle açılış: 3 aylık örnek gelir/fatura/harçlık/borç/harcama_
+### Dashboard — Aylık özet, KPI'lar ve grafikler
 
-| Dashboard | Faturalar | Raporlar |
-|---|---|---|
-| KPI'lar + 6 grafik + yaklaşan ödemeler | Filtreli liste, tekrar eden fatura, durum cycle | Tarih aralığı, PDF/CSV/DB export |
+![Dashboard](screenshots/dashboard.png)
+
+### Faturalar — Durum cycle, kişisel/ev ayrımı, tekrar eden fatura
+
+![Faturalar](screenshots/bills.png)
+
+### Aylık Harcamalar — Inline hızlı ekleme, kategori renkleri, ay özeti
+
+![Harcamalar](screenshots/expenses.png)
+
+### Borçlar — Detay modal'ı, ödeme geçmişi, otomatik arşivleme
+
+![Borçlar](screenshots/debts.png)
+
+### Kişiler & Harçlıklar — Nakit + adına ödenen faturalar
+
+![Kişiler](screenshots/people.png)
+
+### Gelir — Kişi ve kaynak bazlı
+
+![Gelir](screenshots/income.png)
+
+### Raporlar — Tarih aralığı, trend, dışa aktarma
+
+![Raporlar](screenshots/reports.png)
 
 ## Özellikler
 
