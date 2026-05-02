@@ -1,13 +1,21 @@
-# MoneyFam
+<p align="center">
+  <img src="branding/logo.png" alt="MoneyFam" width="420" />
+</p>
 
-> Hane bütçesini birlikte yönetmek için macOS native masaüstü uygulaması.
-> Gelir, fatura, harçlık, borç ve günlük harcama takibini ay bazlı tek bir yerde toplayan, **tamamen lokal çalışan** bir bütçe yöneticisi.
+<h1 align="center">MoneyFam</h1>
 
-[![macOS](https://img.shields.io/badge/macOS-Universal-black?logo=apple&logoColor=white)](#)
-[![Electron](https://img.shields.io/badge/Electron-32-47848F?logo=electron&logoColor=white)](#)
-[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](#)
-[![Tests](https://img.shields.io/badge/tests-74_passing-success?logo=vitest&logoColor=white)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<p align="center">
+  Hane bütçesini birlikte yönetmek için macOS native masaüstü uygulaması.<br/>
+  Gelir, fatura, harçlık, borç ve günlük harcama takibini ay bazlı tek bir yerde toplayan, <b>tamamen lokal çalışan</b> bir bütçe yöneticisi.
+</p>
+
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/macOS-Universal-black?logo=apple&logoColor=white" alt="macOS" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Electron-32-47848F?logo=electron&logoColor=white" alt="Electron" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white" alt="TypeScript" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/tests-74_passing-success?logo=vitest&logoColor=white" alt="Tests" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
+</p>
 
 ---
 
